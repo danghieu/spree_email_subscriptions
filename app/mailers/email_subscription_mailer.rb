@@ -7,8 +7,9 @@ class EmailSubscriptionMailer < ApplicationMailer
   #   en.email_subscription_mailer.thankyou_email,.subject
   #
   def thankyou_email(email_subscription)
-    
+    # p email_subscription
     @email_subscription = email_subscription
+    # p @email_subscription
     @unsubscribe_url = "http://sheltered-stream-93214.herokuapp.com/#/main/email_subscrition?email=#{email_subscription.email}"
     
 
